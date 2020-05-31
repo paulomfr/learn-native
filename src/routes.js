@@ -17,7 +17,7 @@ import { createStackNavigator } from '@react-navigation/stack';
  * Screens
  */
 import Main from './screens/Main';
-import Users from './screens/Users';
+import User from './screens/User';
 
 /**
  * O `createAppContainer` é como se fosse o `BrowserRouter` no react web
@@ -37,9 +37,9 @@ const screenOptions = {
 
 const Routes = () => (
   <NavigationContainer>
-    <Stack.Navigator initialRouteName="Users" screenOptions={screenOptions}>
-      <Stack.Screen name="Main" component={Main} />
-      <Stack.Screen name="Users" component={Users} />
+    <Stack.Navigator initialRouteName="Main" screenOptions={screenOptions}>
+      <Stack.Screen name="Main" component={Main} options={{ title: 'Users' }} />
+      <Stack.Screen name="User" component={User} options={{ title: '' }} />
     </Stack.Navigator>
   </NavigationContainer>
 );
